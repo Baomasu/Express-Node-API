@@ -2,7 +2,7 @@
 This is the follow up of a video-tutorial for building a REST API with Node.js using Express.js framework. The user will be able to Get, Post, Put, Delete and Get by id two sets of lists, each in their own shown routes.
 
 ## Installation
-First we need to initialize our proyect by typing in the command line inside the proyect directory and selecting the setting you like the most  (Node.js with npm should already be installed in your OS):
+First we need to initialize the proyect by typing in the command line inside the proyect directory and afterward select the setting you like the most  (Note: Node.js with npm should already be installed in your OS):
 ```
 npm init
 ```
@@ -34,40 +34,43 @@ package.json:
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Once the proyect is initialize we can start our aplication by running the 'index.js' file inside the '/src/index.js' directory route from the command line with the following instruction:
+```
+node index.js
+```
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+If you prefer to use nodemon simply type in the same directory route the following command:
+```
+nodemon index.js
+```
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+We also can run the application from the root proyect directory by simply typing the command:
+```
+npm run dev
+```
+
+This is because we have initialze the command in our 'package.json' file. If you created a bran new 'package.json' file you can add the following object in it to work:
+```
+"scripts": {
+    "dev": "nodemon ./src/index.js"
+  }
+```
+
+If the proyect started succesffuly it should promt a message in console telling the server started on port 5555, now the REST-APi proyect is running in your localHost on port 5555. To open the client application simply acces from your browser with the following url:
+```
+http://localhost:5555
+```
+
+To interact with the "POST-PUT-DELETE" methods installed in the listening routes we need to use a REST-client application such as "Thunder client' or "Postman" to do so. 
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+**Youtube video:**
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+Tittle: Express Framework de Nodejs, Curso para principiantes (Javascript en el backend).
 
-If you followed tutorials, include links to those here as well.
+Author: Fazt.
 
-## License
+Url: [https://www.youtube.com/watch?v=JmJ1WUoUIK4&t=10052s](https://www.youtube.com/watch?v=JmJ1WUoUIK4&t=10052s)
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
 
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
