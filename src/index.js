@@ -28,7 +28,7 @@ app.use(express.text()); //text.
 app.use(express.json()); //json.
 app.use(express.urlencoded({ extended: false })); //string/arrays.
 //app.use("/static", express.static(path.join(--path.dirname, 'static')));
-app.use("/static", express.static(path.join(__dirname, "static")));
+app.use("/", express.static(path.join(__dirname, "static")));
 
 //routes
 app.use(productRoutes);

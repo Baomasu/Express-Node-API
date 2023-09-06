@@ -24,7 +24,7 @@ let animations = [
 
 //imported routes
 router.get("/animation", (req, res) => {
-  const tittleWelcome = "Bienvenido a las animaciones!"
+  const tittleWelcome = "Bienvenido a animaciones."
   res.render('animations', {tittleWelcome, animations});
 });
 
@@ -66,6 +66,7 @@ router.get("/animation/:id", (req, res) => {
     return res.status(404).json({ message: "product not found." });
 
   console.log(productFound);
+  res.json(productFound);
 });
 
 //MiddleWare de validaciond de usuario por medio de query

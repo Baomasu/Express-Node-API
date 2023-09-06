@@ -24,7 +24,7 @@ let products = [
 ];
 
 router.get("/products", (req, res) => {
-    const tittleWelcome = "Bienvenido a los productos!"
+    const tittleWelcome = "Bienvenido a productos."
     res.render('products', {tittleWelcome, products});
 });
 
@@ -69,8 +69,8 @@ router.get("/products/:id", (req, res) => {
   res.json(productFound);
 });
 
-//MiddleWare de validaciond de usuario por medio de query
-//para acceder a determinadas rutas
+//MiddleWare de validacion de usuario por medio de query
+//para acceder a determinadas rutas.
 // router.use((req, res, next) => {
 //   if (req.query.login === "baomass@login.com") {
 //     next();

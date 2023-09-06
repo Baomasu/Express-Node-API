@@ -1,5 +1,5 @@
 {
-  "name": "expres-restapi-crud",
+  "name": "rest-api",
   "version": "1.0.0",
   "description": "Learning to make a REST API CRUD.",
   "main": "index.js",
@@ -15,5 +15,18 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baomasu/Express-Node-API.git"
+  },
+  "keywords": [
+    "rest-api",
+    "express",
+    "node"
+  ],
+  "bugs": {
+    "url": "https://github.com/Baomasu/Express-Node-API/issues"
+  },
+  "homepage": "https://github.com/Baomasu/Express-Node-API#readme"
 }
