@@ -1,0 +1,13 @@
+<%- include('partials/header'); %>
+
+    <h1>
+        <%= tittleWelcome %>
+    </h1>
+
+    <ul>
+        <% for(let i = 0; i < products.length; i++) { %>
+            <li><%= products[i].id %> "<%= products[i].nombre %>" <%= products[i].color %> $<%= products[i].precio %>.</li>
+        <% } %>
+    </ul>
+
+<%- include('partials/footer'); %>

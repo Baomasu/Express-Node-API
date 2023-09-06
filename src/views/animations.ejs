@@ -1,0 +1,13 @@
+<%- include('partials/header'); %>
+
+    <h1>
+        <%= tittleWelcome %>
+    </h1>
+
+    <ul>
+        <% for(let i = 0; i < animations.length; i++) { %>
+            <li><%= animations[i].id %> "<%= animations[i].title %>" <%= animations[i].library %>.</li>
+        <% } %>
+    </ul>
+
+<%- include('partials/footer'); %>
