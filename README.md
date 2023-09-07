@@ -49,7 +49,7 @@ We also can run the application from the root proyect directory by simply typing
 npm run dev
 ```
 
-This is because we have initialze the command in our 'package.json' file. If you created a bran new 'package.json' file you can add the following object in it to work:
+This is because we have initialize the command in our 'package.json' file. If you created a bran new 'package.json' file you can add the following object in it to work:
 ```
 "scripts": {
     "dev": "nodemon ./src/index.js"
