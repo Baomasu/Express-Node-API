@@ -3,10 +3,10 @@ const morgan = require("morgan");
 const path = require("path");
 const ejs = require('ejs');
 
-
 //Import routes
-const productRoutes = require(path.join(__dirname, "routes/products"));
-const animationRoutes = require(path.join(__dirname, "routes/animations"));
+const productRoutes = require(path.join(__dirname, "routes/products.routes.js"));
+const animationRoutes = require(path.join(__dirname, "routes/animations.routes.js"));
+const pingRoutes = require(path.join(__dirname, "routes/ping.routes.js"));
 
 //Server setup
 const app = express();
@@ -22,6 +22,7 @@ app.listen(port, () =>
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+
 //MiddleWares
 app.use(morgan("dev")); //console messeges.
 app.use(express.text()); //text.
@@ -33,3 +34,5 @@ app.use("/", express.static(path.join(__dirname, "static")));
 //routes
 app.use(productRoutes);
 app.use(animationRoutes);
+app.use(pingRoutes);
+
