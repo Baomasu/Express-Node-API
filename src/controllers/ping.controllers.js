@@ -1,6 +1,8 @@
 const path = require("path");
 const pool = require(path.join(__dirname, "../db.js"));
 
+
+///*
 const getPing = (req, res) => {
   pool.query(`SELECT * FROM employee;`, (err, result, fields) => {
     if (err) {
@@ -12,15 +14,30 @@ const getPing = (req, res) => {
 };
 
 const insertPing = (req, res) => {
-  let query = `INSERT INTO employee(name, salary) VALUES (?, ?);`;
+let nombre = req.body.name;
+let salario = req.body.salary;
+let sql = 'INSERT INTO employee (name,salary) VALUES(?,?);';
 
-  //Values to be inserted
-  const { name, salary } = req.body;
-  console.log('hola francia');
-  //creating queries
-  pool.query(query, [name, salary], (err, rows) => {
-    if (err) throw err;
+pool.query(sql, [nombre,salario], (err, result)=>{
+  if(err) throw err;
+  res.write('POSTED');
+  res.end();
+});
+};
+
+const getPingById = (req, res) => {
+  pool.query(`SELECT * FROM employee WHERE id=1;`, (err, result, fields) => {
+    if (err) {
+      return console.log(err);
+    }
+    res.json(result);
+    console.log(result);
   });
 };
 
-module.exports = getPing, insertPing;
+const putPing = (req,res)=>{};
+const deletePing = (req,res)=>{};
+
+//*/
+
+module.exports = {getPing, insertPing, getPingById, putPing, deletePing};
