@@ -7,6 +7,7 @@ const ejs = require("ejs");
 const productRoutes = require(path.join( __dirname,"routes/products.routes.js"));
 const animationRoutes = require(path.join(__dirname,"routes/animations.routes.js"));
 const pingRoutes = require(path.join(__dirname, "routes/ping.routes.js"));
+const userRoutes = require(path.join(__dirname, "routes/users.routes.js"));
 const {PORT} = require(path.join(__dirname, "config.js"));
 
 //Server setup
@@ -35,6 +36,7 @@ app.use("/", express.static(path.join(__dirname, "static")));
 app.use(productRoutes);
 app.use(animationRoutes);
 app.use(pingRoutes);
+app.use(userRoutes);
 
 //middleware para pagina no encontrada.(nota: profundizar al respecto)
 app.use((req, res, next)=>{
